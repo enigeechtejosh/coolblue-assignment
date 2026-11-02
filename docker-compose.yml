@@ -1,0 +1,101 @@
+name: pet-app
+
+services:
+  api:
+    build:
+      context: ./apps/api
+      target: production
+    init: true
+    environment:
+      APP_ENV: production
+      APP_DEBUG: "false"
+      APP_KEY: "${APP_KEY:-}"
+      LOG_CHANNEL: stderr
+      DB_CONNECTION: sqlite
+      DB_DATABASE: /app/storage/app/pets.sqlite
+      PETS_IMAGE_DISK: minio
+      PETS_IMAGE_DIRECTORY: pet-images
+      MINIO_ROOT_USER: "${MINIO_ROOT_USER:-minioadmin}"
+      MINIO_ROOT_PASSWORD: "${MINIO_ROOT_PASSWORD:-minioadmin}"
+      MINIO_BUCKET: "${MINIO_BUCKET:-pet-images}"
+      MINIO_ENDPOINT: http://minio:9000
+    expose:
+      - "8000"
+    volumes:
+      - pet_data:/app/storage/app
+    depends_on:
+      minio-init:
+        condition: service_completed_successfully
+    healthcheck:
+      test: ["CMD", "php", "-r", "exit(@file_get_contents('http://127.0.0.1:8000/api/pets') === false ? 1 : 0);"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    restart: unless-stopped
+    networks:
+      - public
+      - private
+
+  minio:
+    image: docker.io/pgsty/silo:RELEASE.2026-10-26T00-00-00Z
+    command: ["server", "/data", "--console-address", ":9001"]
+    environment:
+      MINIO_ROOT_USER: "${MINIO_ROOT_USER:-minioadmin}"
+      MINIO_ROOT_PASSWORD: "${MINIO_ROOT_PASSWORD:-minioadmin}"
+    expose:
+      - "9000"
+      - "9001"
+    volumes:
+      - minio_data:/data
+    restart: unless-stopped
+    networks:
+      - private
+
+  minio-init:
+    image: docker.io/pgsty/mc:RELEASE.2026-09-16T00-00-00Z
+    depends_on:
+      - minio
+    environment:
+      MINIO_ROOT_USER: "${MINIO_ROOT_USER:-minioadmin}"
+      MINIO_ROOT_PASSWORD: "${MINIO_ROOT_PASSWORD:-minioadmin}"
+      MINIO_BUCKET: "${MINIO_BUCKET:-pet-images}"
+    entrypoint:
+      - /bin/sh
+      - -c
+      - |
+        until mc alias set local http://minio:9000 "$${MINIO_ROOT_USER}" "$${MINIO_ROOT_PASSWORD}"; do sleep 1; done
+        mc mb --ignore-existing "local/$${MINIO_BUCKET}"
+    restart: "no"
+    networks:
+      - private
+
+  ui:
+    build:
+      context: ./apps/ui
+      target: production
+    init: true
+    ports:
+      - target: 80
+        published: "${UI_PORT:-18730}"
+        protocol: tcp
+    depends_on:
+      api:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://127.0.0.1/"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+    restart: unless-stopped
+    networks:
+      - public
+
+networks:
+  public:
+  private:
+    internal: true
+
+volumes:
+  minio_data:
+  pet_data:

@@ -1,0 +1,10 @@
+node_modules
+dist
+.env
+.env.*
+.git
+**/*.md
+
+test-results
+playwright-report
+.image-sources

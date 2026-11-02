@@ -1,0 +1,182 @@
+[
+  {
+    "id": "b919ed5c-1620-43d9-a34d-dafb0e9ef83b",
+    "name": "Daamin",
+    "species": "Cat",
+    "available": false,
+    "birthYear": 2012,
+    "dateAdded": "19-06-2021",
+    "photoUrl": "https://i.imgur.com/wpfirW7.jpg"
+  },
+  {
+    "id": "43f43467-f04f-4a18-87a0-ad94eb9f3a8a",
+    "name": "Dann",
+    "species": "Dog",
+    "available": true,
+    "birthYear": 2016,
+    "dateAdded": "01-01-2022",
+    "photoUrl": "https://i.imgur.com/ES0AHRx.jpg"
+  },
+  {
+    "id": "f6672b19-e42c-4fe7-a602-0f8e6377676d",
+    "name": "Annemie",
+    "species": "Dog",
+    "available": true,
+    "birthYear": 2008,
+    "dateAdded": "25-04-2021",
+    "photoUrl": "https://i.imgur.com/cL9Su9q.jpg"
+  },
+  {
+    "id": "38a91c70-8fe8-4d54-a99a-eb50f06c7ece",
+    "name": "Baxter",
+    "species": "Cat",
+    "available": true,
+    "birthYear": 2020,
+    "dateAdded": "13-08-2021",
+    "photoUrl": "https://i.imgur.com/uvkCHCy.jpg"
+  },
+  {
+    "id": "b9eb388b-3299-42db-90e5-7b381299bace",
+    "name": "Beau",
+    "species": "Cat",
+    "available": false,
+    "birthYear": 2013,
+    "dateAdded": "15-12-2021",
+    "photoUrl": "https://i.imgur.com/dZXHXHn.jpg"
+  },
+  {
+    "id": "af7b0151-77f3-4c06-b7a5-85f3ce1ba924",
+    "name": "Echo",
+    "species": "Dog",
+    "available": false,
+    "birthYear": 2019,
+    "dateAdded": "20-12-2021",
+    "photoUrl": "https://i.imgur.com/KkxqmNs.jpg"
+  },
+  {
+    "id": "caca153c-8765-458a-b7fc-5bc7fd5591df",
+    "name": "Arlo",
+    "species": "Rat",
+    "available": true,
+    "birthYear": 2010,
+    "dateAdded": "27-01-2022",
+    "photoUrl": "https://i.imgur.com/cw1ScXP.jpg"
+  },
+  {
+    "id": "bf2f977b-ef08-480c-b683-247ddfc9088a",
+    "name": "Romeo",
+    "species": "Dog",
+    "available": true,
+    "birthYear": 2015,
+    "dateAdded": "05-02-2021",
+    "photoUrl": "https://i.imgur.com/7E8m93W.jpg"
+  },
+  {
+    "id": "07743ff3-65a3-467d-9d67-a67b57d66005",
+    "name": "Tank",
+    "species": "Dog",
+    "available": false,
+    "birthYear": 2015,
+    "dateAdded": "05-08-2021",
+    "photoUrl": "https://i.imgur.com/Q4CSFnX.jpg"
+  },
+  {
+    "id": "31506bf7-42a0-4861-9c6f-f1b30125c273",
+    "name": "Henry",
+    "species": "Cat",
+    "available": true,
+    "birthYear": 2009,
+    "dateAdded": "18-02-2021",
+    "photoUrl": "https://i.imgur.com/wt5AGpR.jpg"
+  },
+  {
+    "id": "eb8dc1c0-6cc7-417e-8f4e-c8e018ccbb99",
+    "name": "Coco",
+    "species": "Dog",
+    "available": false,
+    "birthYear": 2007,
+    "dateAdded": "11-10-2021",
+    "photoUrl": "https://i.imgur.com/AxzxKXk.jpg"
+  },
+  {
+    "id": "e78469d0-d6da-4a43-b729-e032f2ede431",
+    "name": "Riley",
+    "species": "Dog",
+    "available": false,
+    "birthYear": 2018,
+    "dateAdded": "11-01-2022",
+    "photoUrl": "https://i.imgur.com/xIqqOVz.jpg"
+  },
+  {
+    "id": "0b67274a-bb1f-44d0-8a8c-d6a1e411b2bb",
+    "name": "Ace",
+    "species": "Dog",
+    "available": false,
+    "birthYear": 2018,
+    "dateAdded": "21-01-2021",
+    "photoUrl": "https://i.imgur.com/N1ZEtEw.jpg"
+  },
+  {
+    "id": "7937c76e-dff6-49ac-ae21-7f72be7bccbb",
+    "name": "Louie",
+    "species": "Dog",
+    "available": true,
+    "birthYear": 2016,
+    "dateAdded": "23-07-2021",
+    "photoUrl": "https://i.imgur.com/3sbNyva.jpg"
+  },
+  {
+    "id": "c0b4404d-6ab6-4895-9ead-5178beb6678e",
+    "name": "Toby",
+    "species": "Cat",
+    "available": true,
+    "birthYear": 2019,
+    "dateAdded": "23-08-2021",
+    "photoUrl": "https://i.imgur.com/gKGKsTg.jpg"
+  },
+  {
+    "id": "c1095cf8-8840-4b4a-b770-4be77a3ddc12",
+    "name": "Mac",
+    "species": "Cat",
+    "available": true,
+    "birthYear": 2014,
+    "dateAdded": "29-10-2021",
+    "photoUrl": "https://i.imgur.com/1o7jhPf.jpg"
+  },
+  {
+    "id": "82b381af-a779-4cbb-bf92-202848c9ccea",
+    "name": "Murphy",
+    "species": "Dog",
+    "available": true,
+    "birthYear": 2017,
+    "dateAdded": "29-05-2021",
+    "photoUrl": "https://i.imgur.com/9c3OfRU.jpg"
+  },
+  {
+    "id": "1742b72e-5bff-4080-be92-a860f9a56df6",
+    "name": "Buster",
+    "species": "Dog",
+    "available": true,
+    "birthYear": 2017,
+    "dateAdded": "12-01-2022",
+    "photoUrl": "https://i.imgur.com/0FdlwHx.jpg"
+  },
+  {
+    "id": "62b0a177-cdcb-4d31-8b4a-832d44c1b08b",
+    "name": "Moose",
+    "species": "Cat",
+    "available": false,
+    "birthYear": 2014,
+    "dateAdded": "14-01-2022",
+    "photoUrl": "https://i.imgur.com/E24QYnz.jpg"
+  },
+  {
+    "id": "14b067f6-0e11-4909-8268-b11161504c45",
+    "name": "Bruno",
+    "species": "Dog",
+    "available": true,
+    "birthYear": 2010,
+    "dateAdded": "19-01-2022",
+    "photoUrl": "https://i.imgur.com/y5MOaAb.jpg"
+  }
+]

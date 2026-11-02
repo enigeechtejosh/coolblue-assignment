@@ -1,0 +1,13 @@
+/.env
+/.env.backup
+/.env.production
+/auth.json
+/vendor/
+/bootstrap/cache/*.php
+/storage/*.key
+/storage/logs/*
+/.phpunit.cache/
+/.phpunit.result.cache
+
+/phpstan.neon
+/storage/framework/cache/phpstan/

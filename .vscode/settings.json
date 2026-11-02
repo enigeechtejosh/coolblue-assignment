@@ -1,0 +1,26 @@
+{
+  "intelephense.environment.phpVersion": "8.4.0",
+  "intelephense.environment.includePaths": [
+    "apps/api/app",
+    "apps/api/vendor"
+  ],
+  "intelephense.files.exclude": [
+    "**/.git/**",
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/vendor/**/{Tests,tests}/**",
+    "**/vendor/**/vendor/**",
+    "**/storage/framework/**",
+    "**/bootstrap/cache/**"
+  ],
+  "[typescript]": {
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false
+  },
+  "[typescriptreact]": {
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false
+  }
+}

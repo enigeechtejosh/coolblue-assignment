@@ -1,0 +1,31 @@
+# Generated dependencies, builds, and caches
+node_modules/
+dist/
+*.log
+*.local
+
+# Local environment configuration
+.env
+.env.*
+!.env.example
+!.env.testing
+
+# Laravel generated files
+/apps/api/vendor/
+/apps/api/bootstrap/cache/*.php
+/apps/api/storage/logs/*
+/apps/api/.phpunit.cache/
+
+# Editors and operating systems
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+.DS_Store
+
+# Browser test output
+/apps/ui/test-results/
+/apps/ui/playwright-report/
+
+# Original photos cached by the thumbnail generator
+/apps/ui/.image-sources/

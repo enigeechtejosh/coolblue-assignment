@@ -1,0 +1,14 @@
+vendor
+node_modules
+.env
+.env.*
+!.env.example
+.git
+**/*.md
+storage/logs/*
+bootstrap/cache/*.php
+.phpunit.cache
+
+!.env.testing
+
+storage/framework/cache/phpstan

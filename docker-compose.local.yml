@@ -1,0 +1,65 @@
+name: pet-app-development
+
+services:
+  api:
+    build:
+      target: development
+    entrypoint: ["sh", "/app/docker-entrypoint.sh"]
+    command: ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]
+    environment:
+      APP_ENV: local
+      APP_DEBUG: "true"
+    ports: !override
+      - target: 8000
+        published: "${API_PORT:-18780}"
+        protocol: tcp
+    volumes:
+      - ./apps/api:/app
+      - api_vendor:/app/vendor
+
+  minio:
+    networks:
+      - private
+      - public
+    ports: !override
+      - target: 9000
+        published: "${MINIO_API_PORT:-19000}"
+        protocol: tcp
+      - target: 9001
+        published: "${MINIO_CONSOLE_PORT:-19001}"
+        protocol: tcp
+
+  ui:
+    build:
+      target: development
+    command: ["sh", "/app/docker/dev.sh"]
+    environment:
+      API_PROXY_TARGET: http://api:8000
+    ports: !override
+      - target: 80
+        published: "${UI_PORT:-18730}"
+        protocol: tcp
+    volumes:
+      - ./apps/ui:/app:ro
+      - ui_node_modules:/app/node_modules
+
+  ui-tests:
+    image: mcr.microsoft.com/playwright:v1.63.0-noble
+    profiles: ["tests"]
+    init: true
+    user: "${LOCAL_UID:-1000}:${LOCAL_GID:-1000}"
+    working_dir: /work
+    volumes:
+      - ./apps/ui:/work
+    environment:
+      UI_BASE_URL: http://ui
+    depends_on:
+      ui:
+        condition: service_healthy
+    command: ["npm", "run", "test:e2e"]
+    networks:
+      - public
+
+volumes:
+  api_vendor:
+  ui_node_modules:

@@ -18,7 +18,6 @@ final readonly class CreatePet
         string $species,
         bool $available,
         int $birthYear,
-        string $photoUrl,
     ): Pet {
         $pet = new Pet(
             id: strtolower($id),
@@ -27,7 +26,6 @@ final readonly class CreatePet
             available: $available,
             birthYear: $birthYear,
             dateAdded: CarbonImmutable::now()->format('d-m-Y'),
-            photoUrl: $photoUrl,
         );
         $this->repository->save($pet);
 

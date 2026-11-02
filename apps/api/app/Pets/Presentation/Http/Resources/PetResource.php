@@ -26,7 +26,7 @@ final class PetResource extends JsonResource
             'available' => $pet->available,
             'birthYear' => $pet->birthYear,
             'dateAdded' => $pet->dateAdded,
-            'photoUrl' => $pet->photoUrl,
+            'photoUrl' => "/api/pet-images/{$pet->id}/photo.webp",
         ];
     }
 }

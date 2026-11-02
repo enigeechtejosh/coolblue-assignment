@@ -8,7 +8,6 @@ use App\Pets\Domain\Models\Pet;
 use Illuminate\Contracts\Validation\Factory as ValidationFactory;
 use RuntimeException;
 use stdClass;
-use Symfony\Component\Uid\UuidV4;
 
 final readonly class PetRecordFactory
 {
@@ -27,16 +26,6 @@ final readonly class PetRecordFactory
             'available' => ['required', 'boolean:strict'],
             'birthYear' => ['bail', 'required', 'integer:strict', 'min:1'],
             'dateAdded' => ['bail', 'required', 'string', 'date_format:d-m-Y'],
-            'photoUrl' => ['bail', 'required', 'string', function (string $attribute, mixed $value, \Closure $fail): void {
-                $localUrl = is_string($value)
-                    && str_starts_with($value, '/api/pet-images/')
-                    && str_ends_with($value, '/photo.webp')
-                    && UuidV4::isValid(substr($value, 16, -11));
-
-                if (! $localUrl) {
-                    $fail("The {$attribute} field must be a pet image URL.");
-                }
-            }],
         ]);
 
         if ($validation->fails()) {
@@ -52,7 +41,6 @@ final readonly class PetRecordFactory
             available: $fields['available'],
             birthYear: $fields['birthYear'],
             dateAdded: $fields['dateAdded'],
-            photoUrl: $fields['photoUrl'],
         );
     }
 }

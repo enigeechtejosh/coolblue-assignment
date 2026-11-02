@@ -13,7 +13,5 @@ final readonly class Pet
         public bool $available,
         public int $birthYear,
         public string $dateAdded,
-        public string $photoUrl,
     ) {}
-
 }

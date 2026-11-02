@@ -16,7 +16,6 @@ return new class extends Migration
             $table->boolean('available');
             $table->unsignedSmallInteger('birth_year');
             $table->string('date_added', 10);
-            $table->text('photo_url');
         });
     }
 

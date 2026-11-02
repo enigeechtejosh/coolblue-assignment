@@ -18,7 +18,6 @@ final readonly class UpdatePet
         string $species,
         bool $available,
         int $birthYear,
-        ?string $photoUrl,
     ): Pet {
         $existing = $this->repository->findById($id);
         if ($existing === null) {
@@ -32,7 +31,6 @@ final readonly class UpdatePet
             available: $available,
             birthYear: $birthYear,
             dateAdded: $existing->dateAdded,
-            photoUrl: $photoUrl ?? $existing->photoUrl,
         );
         $this->repository->save($pet);
 

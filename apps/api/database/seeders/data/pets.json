@@ -5,8 +5,7 @@
         "species": "Cat",
         "available": false,
         "birthYear": 2012,
-        "dateAdded": "19-06-2021",
-        "photoUrl": "/api/pet-images/b919ed5c-1620-43d9-a34d-dafb0e9ef83b/photo.webp"
+        "dateAdded": "19-06-2021"
     },
     {
         "id": "43f43467-f04f-4a18-87a0-ad94eb9f3a8a",
@@ -14,8 +13,7 @@
         "species": "Dog",
         "available": true,
         "birthYear": 2016,
-        "dateAdded": "01-01-2022",
-        "photoUrl": "/api/pet-images/43f43467-f04f-4a18-87a0-ad94eb9f3a8a/photo.webp"
+        "dateAdded": "01-01-2022"
     },
     {
         "id": "f6672b19-e42c-4fe7-a602-0f8e6377676d",
@@ -23,8 +21,7 @@
         "species": "Dog",
         "available": true,
         "birthYear": 2008,
-        "dateAdded": "25-04-2021",
-        "photoUrl": "/api/pet-images/f6672b19-e42c-4fe7-a602-0f8e6377676d/photo.webp"
+        "dateAdded": "25-04-2021"
     },
     {
         "id": "38a91c70-8fe8-4d54-a99a-eb50f06c7ece",
@@ -32,8 +29,7 @@
         "species": "Cat",
         "available": true,
         "birthYear": 2020,
-        "dateAdded": "13-08-2021",
-        "photoUrl": "/api/pet-images/38a91c70-8fe8-4d54-a99a-eb50f06c7ece/photo.webp"
+        "dateAdded": "13-08-2021"
     },
     {
         "id": "b9eb388b-3299-42db-90e5-7b381299bace",
@@ -41,8 +37,7 @@
         "species": "Cat",
         "available": false,
         "birthYear": 2013,
-        "dateAdded": "15-12-2021",
-        "photoUrl": "/api/pet-images/b9eb388b-3299-42db-90e5-7b381299bace/photo.webp"
+        "dateAdded": "15-12-2021"
     },
     {
         "id": "af7b0151-77f3-4c06-b7a5-85f3ce1ba924",
@@ -50,8 +45,7 @@
         "species": "Dog",
         "available": false,
         "birthYear": 2019,
-        "dateAdded": "20-12-2021",
-        "photoUrl": "/api/pet-images/af7b0151-77f3-4c06-b7a5-85f3ce1ba924/photo.webp"
+        "dateAdded": "20-12-2021"
     },
     {
         "id": "caca153c-8765-458a-b7fc-5bc7fd5591df",
@@ -59,8 +53,7 @@
         "species": "Rat",
         "available": true,
         "birthYear": 2010,
-        "dateAdded": "27-01-2022",
-        "photoUrl": "/api/pet-images/caca153c-8765-458a-b7fc-5bc7fd5591df/photo.webp"
+        "dateAdded": "27-01-2022"
     },
     {
         "id": "bf2f977b-ef08-480c-b683-247ddfc9088a",
@@ -68,8 +61,7 @@
         "species": "Dog",
         "available": true,
         "birthYear": 2015,
-        "dateAdded": "05-02-2021",
-        "photoUrl": "/api/pet-images/bf2f977b-ef08-480c-b683-247ddfc9088a/photo.webp"
+        "dateAdded": "05-02-2021"
     },
     {
         "id": "07743ff3-65a3-467d-9d67-a67b57d66005",
@@ -77,8 +69,7 @@
         "species": "Dog",
         "available": false,
         "birthYear": 2015,
-        "dateAdded": "05-08-2021",
-        "photoUrl": "/api/pet-images/07743ff3-65a3-467d-9d67-a67b57d66005/photo.webp"
+        "dateAdded": "05-08-2021"
     },
     {
         "id": "31506bf7-42a0-4861-9c6f-f1b30125c273",
@@ -86,8 +77,7 @@
         "species": "Cat",
         "available": true,
         "birthYear": 2009,
-        "dateAdded": "18-02-2021",
-        "photoUrl": "/api/pet-images/31506bf7-42a0-4861-9c6f-f1b30125c273/photo.webp"
+        "dateAdded": "18-02-2021"
     },
     {
         "id": "eb8dc1c0-6cc7-417e-8f4e-c8e018ccbb99",
@@ -95,8 +85,7 @@
         "species": "Dog",
         "available": false,
         "birthYear": 2007,
-        "dateAdded": "11-10-2021",
-        "photoUrl": "/api/pet-images/eb8dc1c0-6cc7-417e-8f4e-c8e018ccbb99/photo.webp"
+        "dateAdded": "11-10-2021"
     },
     {
         "id": "e78469d0-d6da-4a43-b729-e032f2ede431",
@@ -104,8 +93,7 @@
         "species": "Dog",
         "available": false,
         "birthYear": 2018,
-        "dateAdded": "11-01-2022",
-        "photoUrl": "/api/pet-images/e78469d0-d6da-4a43-b729-e032f2ede431/photo.webp"
+        "dateAdded": "11-01-2022"
     },
     {
         "id": "0b67274a-bb1f-44d0-8a8c-d6a1e411b2bb",
@@ -113,8 +101,7 @@
         "species": "Dog",
         "available": false,
         "birthYear": 2018,
-        "dateAdded": "21-01-2021",
-        "photoUrl": "/api/pet-images/0b67274a-bb1f-44d0-8a8c-d6a1e411b2bb/photo.webp"
+        "dateAdded": "21-01-2021"
     },
     {
         "id": "7937c76e-dff6-49ac-ae21-7f72be7bccbb",
@@ -122,8 +109,7 @@
         "species": "Dog",
         "available": true,
         "birthYear": 2016,
-        "dateAdded": "23-07-2021",
-        "photoUrl": "/api/pet-images/7937c76e-dff6-49ac-ae21-7f72be7bccbb/photo.webp"
+        "dateAdded": "23-07-2021"
     },
     {
         "id": "c0b4404d-6ab6-4895-9ead-5178beb6678e",
@@ -131,8 +117,7 @@
         "species": "Cat",
         "available": true,
         "birthYear": 2019,
-        "dateAdded": "23-08-2021",
-        "photoUrl": "/api/pet-images/c0b4404d-6ab6-4895-9ead-5178beb6678e/photo.webp"
+        "dateAdded": "23-08-2021"
     },
     {
         "id": "c1095cf8-8840-4b4a-b770-4be77a3ddc12",
@@ -140,8 +125,7 @@
         "species": "Cat",
         "available": true,
         "birthYear": 2014,
-        "dateAdded": "29-10-2021",
-        "photoUrl": "/api/pet-images/c1095cf8-8840-4b4a-b770-4be77a3ddc12/photo.webp"
+        "dateAdded": "29-10-2021"
     },
     {
         "id": "82b381af-a779-4cbb-bf92-202848c9ccea",
@@ -149,8 +133,7 @@
         "species": "Dog",
         "available": true,
         "birthYear": 2017,
-        "dateAdded": "29-05-2021",
-        "photoUrl": "/api/pet-images/82b381af-a779-4cbb-bf92-202848c9ccea/photo.webp"
+        "dateAdded": "29-05-2021"
     },
     {
         "id": "1742b72e-5bff-4080-be92-a860f9a56df6",
@@ -158,8 +141,7 @@
         "species": "Dog",
         "available": true,
         "birthYear": 2017,
-        "dateAdded": "12-01-2022",
-        "photoUrl": "/api/pet-images/1742b72e-5bff-4080-be92-a860f9a56df6/photo.webp"
+        "dateAdded": "12-01-2022"
     },
     {
         "id": "62b0a177-cdcb-4d31-8b4a-832d44c1b08b",
@@ -167,8 +149,7 @@
         "species": "Cat",
         "available": false,
         "birthYear": 2014,
-        "dateAdded": "14-01-2022",
-        "photoUrl": "/api/pet-images/62b0a177-cdcb-4d31-8b4a-832d44c1b08b/photo.webp"
+        "dateAdded": "14-01-2022"
     },
     {
         "id": "14b067f6-0e11-4909-8268-b11161504c45",
@@ -176,7 +157,6 @@
         "species": "Dog",
         "available": true,
         "birthYear": 2010,
-        "dateAdded": "19-01-2022",
-        "photoUrl": "/api/pet-images/14b067f6-0e11-4909-8268-b11161504c45/photo.webp"
+        "dateAdded": "19-01-2022"
     }
 ]

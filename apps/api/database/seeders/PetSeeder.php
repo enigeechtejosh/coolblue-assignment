@@ -47,7 +47,6 @@ final class PetSeeder extends Seeder
                 available: $current->available,
                 birthYear: $current->birthYear,
                 dateAdded: $current->dateAdded,
-                photoUrl: $pet->photoUrl,
             ));
         }
     }

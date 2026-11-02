@@ -15,7 +15,13 @@ final class PetDataset
 
     public static function records(): array
     {
-        return json_decode(self::json(), true, flags: JSON_THROW_ON_ERROR);
+        $pets = json_decode(self::json(), true, flags: JSON_THROW_ON_ERROR);
+
+        return array_map(static function (array $pet): array {
+            $pet['photoUrl'] = "/api/pet-images/{$pet['id']}/photo.webp";
+
+            return $pet;
+        }, $pets);
     }
 
     public static function json(): string

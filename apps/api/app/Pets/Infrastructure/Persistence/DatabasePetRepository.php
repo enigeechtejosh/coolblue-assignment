@@ -45,7 +45,6 @@ final readonly class DatabasePetRepository implements PetRepository
             'available' => $pet->available,
             'birth_year' => $pet->birthYear,
             'date_added' => $pet->dateAdded,
-            'photo_url' => $pet->photoUrl,
         ];
 
         $updated = $this->database
@@ -72,7 +71,6 @@ final readonly class DatabasePetRepository implements PetRepository
             'available' => (bool) $record->available,
             'birthYear' => $record->birth_year,
             'dateAdded' => $record->date_added,
-            'photoUrl' => $record->photo_url,
         ]);
     }
 }

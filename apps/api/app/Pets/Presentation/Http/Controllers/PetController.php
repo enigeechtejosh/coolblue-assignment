@@ -40,7 +40,7 @@ final class PetController
         CreatePet $createPet,
     ): JsonResponse {
         $id = Uuid::v4()->toRfc4122();
-        $photoUrl = $images->store($id, $request->uploadedImage());
+        $images->store($id, $request->uploadedImage());
         try {
             $pet = $createPet->execute(
                 id: $id,
@@ -48,7 +48,6 @@ final class PetController
                 species: $request->string('species')->trim()->toString(),
                 available: $request->boolean('available'),
                 birthYear: $request->integer('birthYear'),
-                photoUrl: $photoUrl,
             );
         } catch (Throwable $error) {
             $images->delete($id);
@@ -66,14 +65,15 @@ final class PetController
     ): PetResource {
         $getPet->execute($request->petId());
         $image = $request->uploadedImage();
-        $photoUrl = $image === null ? null : $images->store($request->petId(), $image);
+        if ($image !== null) {
+            $images->store($request->petId(), $image);
+        }
         $pet = $updatePet->execute(
             id: $request->petId(),
             name: $request->string('name')->trim()->toString(),
             species: $request->string('species')->trim()->toString(),
             available: $request->boolean('available'),
             birthYear: $request->integer('birthYear'),
-            photoUrl: $photoUrl,
         );
 
         return new PetResource($pet);
@@ -85,9 +85,7 @@ final class PetController
         PetImageStorage $images,
     ): Response {
         $pet = $deletePet->execute($request->petId());
-        if (str_starts_with($pet->photoUrl, '/api/pet-images/')) {
-            $images->delete($pet->id);
-        }
+        $images->delete($pet->id);
 
         return response()->noContent();
     }

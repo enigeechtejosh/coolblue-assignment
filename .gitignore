@@ -26,6 +26,3 @@ dist/
 # Browser test output
 /apps/ui/test-results/
 /apps/ui/playwright-report/
-
-# Original photos cached by the thumbnail generator
-/apps/ui/.image-sources/

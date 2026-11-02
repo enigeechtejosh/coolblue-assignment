@@ -2,10 +2,10 @@
 
 namespace App\Providers;
 
-use App\Domain\Pets\PetRepository;
-use App\Infrastructure\Factories\PetRecordFactory;
-use App\Infrastructure\Images\PetImageStorage;
-use App\Infrastructure\Persistence\DatabasePetRepository;
+use App\Pets\Domain\Repositories\PetRepository;
+use App\Pets\Infrastructure\Factories\PetRecordFactory;
+use App\Pets\Infrastructure\Images\PetImageStorage;
+use App\Pets\Infrastructure\Persistence\DatabasePetRepository;
 use Illuminate\Contracts\Filesystem\Factory as FilesystemFactory;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Database\DatabaseManager;

@@ -10,9 +10,12 @@ final class PetDataset
 
     public static function firstId(): string
     {
-        $pets = json_decode(self::json(), true, flags: JSON_THROW_ON_ERROR);
+        return self::records()[0]['id'];
+    }
 
-        return $pets[0]['id'];
+    public static function records(): array
+    {
+        return json_decode(self::json(), true, flags: JSON_THROW_ON_ERROR);
     }
 
     public static function json(): string

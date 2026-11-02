@@ -63,7 +63,7 @@ export default [
   },
   {
     name: "Domain boundaries",
-    files: ["src/domain/**/*.ts"],
+    files: ["src/domains/*/domain/**/*.ts"],
     rules: {
       "no-restricted-imports": [
         "error",
@@ -75,6 +75,8 @@ export default [
             "**/application/**",
             "**/infrastructure/**",
             "**/presentation/**",
+            "@/app/**",
+            "@/shared/**",
           ],
         },
       ],
@@ -83,7 +85,7 @@ export default [
   },
   {
     name: "Application boundaries",
-    files: ["src/application/**/*.ts"],
+    files: ["src/domains/*/application/**/*.ts"],
     rules: {
       "no-restricted-imports": [
         "error",
@@ -94,6 +96,8 @@ export default [
             "react-dom/*",
             "**/infrastructure/**",
             "**/presentation/**",
+            "@/app/**",
+            "@/shared/**",
           ],
         },
       ],
@@ -102,7 +106,7 @@ export default [
   },
   {
     name: "Infrastructure boundaries",
-    files: ["src/infrastructure/**/*.ts"],
+    files: ["src/domains/*/infrastructure/**/*.ts"],
     rules: {
       "no-restricted-imports": [
         "error",
@@ -111,20 +115,32 @@ export default [
             "react",
             "react-dom",
             "react-dom/*",
-            "**/application/**",
+            "**/application/use-cases/**",
             "**/presentation/**",
+            "@/app/**",
+            "@/shared/**",
           ],
         },
       ],
     },
   },
   {
-    name: "Presentation boundaries",
-    files: ["src/presentation/**/*.{ts,tsx}"],
+    name: "Shared boundaries",
+    files: ["src/shared/**/*.{ts,tsx}"],
     rules: {
       "no-restricted-imports": [
         "error",
-        { patterns: ["**/infrastructure/**"] },
+        { patterns: ["@/domains/**", "@/app/**"] },
+      ],
+    },
+  },
+  {
+    name: "Presentation boundaries",
+    files: ["src/domains/*/presentation/**/*.{ts,tsx}"],
+    rules: {
+      "no-restricted-imports": [
+        "error",
+        { patterns: ["**/infrastructure/**", "@/app/**"] },
       ],
       "no-restricted-globals": ["error", "fetch"],
     },

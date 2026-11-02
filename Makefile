@@ -1,12 +1,19 @@
-.PHONY: dev rebuild down logs ui-install ui-dev ui-test ui-check api-test api-lint api-analyse api-check ui-test-e2e
+.PHONY: setup dev rebuild seed down logs ui-install ui-dev ui-test ui-check api-test api-lint api-analyse api-check ui-test-e2e
 
 COMPOSE_LOCAL = docker compose -f docker-compose.yml -f docker-compose.local.yml
+
+setup:
+	test -f .env || cp .env.example .env
+	$(COMPOSE_LOCAL) up -d --wait
 
 dev:
 	$(COMPOSE_LOCAL) up -d --wait
 
 rebuild:
 	$(COMPOSE_LOCAL) up --build -d --wait
+
+seed:
+	$(COMPOSE_LOCAL) exec api php artisan db:seed --force
 
 down:
 	$(COMPOSE_LOCAL) down
